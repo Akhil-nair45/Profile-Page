@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Scoreboard</title>
+</head>
+
+<body>
+    <h1>Cricket Scoreboard</h1>
+    <p>Team A: <input type="text" id="teamARuns"  placeholder="Enter Runs of Team A"> runs, <input type="text" id="teamAWickets"  placeholder="Enter Wickets of Team A">
+        wickets</p>
+    <p>Team B: <input type="text" id="teamBRuns"  placeholder="Enter Runs of Team B"> runs, <input type="text" id="teamBWickets"  placeholder="Enter Wickets of Team B">
+        wickets</p>
+    <button id="checkWinnerBtn">Check Winner</button>
+    <p id="result"></p>
+    <script>
+        const checkWinnerBtn = document.getElementById("checkWinnerBtn");
+        checkWinnerBtn.addEventListener("click", function () {
+            const teamARuns = (document.getElementById("teamARuns").value);
+            const teamAWickets = Number(document.getElementById("teamAWickets").value);
+            const teamBRuns = Number(document.getElementById("teamBRuns").value);
+            const teamBWickets = Number(document.getElementById("teamBWickets").value);
+            let result;
+            if(teamAWickets > 10){
+                result  = "Wicket should not be more than 10";
+            }else if(teamBWickets > 10){
+                result  = "Wicket should not be more than 10";
+            }
+           else if (teamARuns > teamBRuns) {
+                result = "Team A is winning by " + (teamARuns - teamBRuns) + " runs.";
+            } else if (teamBRuns > teamARuns) {
+                result = "Team B is winning by " + (10 - teamBWickets) + " wickets.";
+            }
+
+            else {
+                result = "The match is tied.";
+            }
+
+            document.getElementById("result").innerHTML = result;
+            
+        });
+    </script>
+</body>
+
+</html>

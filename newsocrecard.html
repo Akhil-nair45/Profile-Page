@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cricket Scoreboard</title>
+</head>
+
+<body>
+    <h1>Cricket Scoreboard</h1>
+    <p>Team A: <input type="text" id="teamARuns"> runs, <input type="text" id="teamAWickets">
+        wickets</p>
+    <p>Team B: <input type="text" id="teamBRuns"> runs, <input type="text" id="teamBWickets">
+        wickets</p>
+    <button onclick="myfun()">Check Winner</button>
+    <p id="result"></p>
+    <script>
+
+        function myfun(){
+            var teamARuns = document.getElementById("teamARuns").value;
+            var teamBRuns = document.getElementById("teamBRuns").value;
+            var teamAWickets = document.getElementById("teamAWickets").value;
+            var teamBWickets = document.getElementById("teamBWickets").value;
+        let result;
+            if(teamAWickets > 10){
+                result  = "Wicket should not be more than 10";
+            }else if(teamBWickets > 10){
+                result  = "Wicket should not be more than 10";
+            }
+           else if (teamARuns > teamBRuns) {
+                result = "Team A is winning by " + (teamARuns - teamBRuns) + " runs.";
+            } else if (teamBRuns > teamARuns) {
+                result = "Team B is winning by " + (10 - teamBWickets) + " wickets.";
+            }
+
+            else {
+                result = "The match is tied.";
+            }
+
+           
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -12,3 +12,9 @@
 </ol>
 </body>
 </html>
+
+<h1>Profile Page</h1>
+   <h3>Name-: Akhil Nair</h3>
+   <h3>Address-: Ahmedabad, Gujarat India-382475</h3>
+   <h3>Phone no-: 9157475945</h3>
+   <h3>Name-: Akhil Nair</h3>
