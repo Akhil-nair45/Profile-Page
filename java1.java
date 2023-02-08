@@ -27,6 +27,7 @@ public class java1
         else
         {
           savings = (salary*0.5) + (salary*0.02*shifts);
+          System.out.println(savings);
         }
     }
 }
