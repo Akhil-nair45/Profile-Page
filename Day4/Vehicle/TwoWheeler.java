@@ -1,6 +1,6 @@
 public class TwoWheeler extends vehicle {
 	
-	private Boolean kickStartAvailable=false;
+	private Boolean kickStartAvailable;
 	//private Boolean b;
 
 	public TwoWheeler(String m, String vn, String ft, String fc, int cc,boolean an) {

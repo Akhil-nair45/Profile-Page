@@ -5,6 +5,8 @@ public class vehicle {
 	private String make;
 	private String vehicleNumber;
 	private String fuelType;
+	private String fuelCapacity;
+	private int cc;
 	public String getMake() {
 		return make;
 	}
@@ -45,8 +47,6 @@ public class vehicle {
 		this.cc = cc;
 	}
 
-	private String fuelCapacity;
-	private int cc;
 	
 	public vehicle(String m,String vn, String ft, String fc, int cc)
 	{
