@@ -4,8 +4,9 @@ public class Exception2 {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		try (Scanner sc = new Scanner(System.in)) 
-		{
+		try{
+             Scanner sc = new Scanner(System.in);
+		
 			System.out.println("Enter number of over");
 			int num = sc.nextInt();
 			
