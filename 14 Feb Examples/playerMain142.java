@@ -52,6 +52,10 @@
                 + "]";
     }
 
+    public int compareTo(player o) {
+        // TODO Auto-generated method stub
+        return this.playerName.compareTo(o.getPlayerName());
+    }
     
     
 }
