@@ -1,5 +1,6 @@
 //example1 with variable assigned blank.
 public class ExceptionExample2 {
+    
     public static void main(String[] args) {
         String s1;
         System.out.println("First Line");
