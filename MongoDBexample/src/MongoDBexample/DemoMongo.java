@@ -1,0 +1,18 @@
+package MongoDBexample;
+
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.*;
+import org.bson.Document; 
+public class DemoMongo {
+	public static void main(String[] args) {
+		MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
+		MongoDatabase database = mongoClient.getDatabase("mydatabase");
+MongoCollection<Document> collection = database.getCollection("mycollection");
+ 	MongoCursor<Document> cursor = collection.find().iterator();
+ 	while (cursor.hasNext()) {
+ 		System.out.println(cursor.next());
+}
+mongoClient.close();
+    }
+}

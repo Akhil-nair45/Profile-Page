@@ -1,0 +1,27 @@
+package sql;
+import java.sql.*;
+
+public class mysql {
+
+		public static void main(String[] args) throws Exception
+		
+		
+		String dburl="jdbc:mysql://localhost:3306/demo";
+		String user="root";
+		String pass= "root";
+		
+		try {
+			Connection myConn= DriverManager.getConnection(dburl,user,pass);
+			Statement myStmt = myConn.createStatement();
+			ResultSet myRs =	myStmt.executeQuery("Select *from ipl");
+			
+			while(myRs.next())
+			{
+				System.out.println(Rs.getString("first_name")+ ", "+Rs.getString("last_name"));	
+			}
+				
+		}catch(SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+}

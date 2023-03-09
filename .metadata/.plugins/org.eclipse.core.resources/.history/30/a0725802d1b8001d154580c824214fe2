@@ -1,0 +1,8 @@
+package demospring;
+@component
+public class Team {
+	public void show()
+	{
+		System.out.println("Team Found");
+	}
+}

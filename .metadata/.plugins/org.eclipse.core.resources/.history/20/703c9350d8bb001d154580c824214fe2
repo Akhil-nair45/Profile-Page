@@ -1,0 +1,33 @@
+package sql;
+import java.sql.*;
+
+public class mysql {
+
+		public static void main(String[] args) {
+		
+		
+		String dburl="jdbc:mysql://localhost:3306/ipl";
+		String user="root";
+		String pass= "root";
+		
+		try {
+			Connection myConn= DriverManager.getConnection(dburl,user,pass);
+			Statement myStmt = myConn.createStatement();
+			ResultSet myRs =	myStmt.executeQuery("Select *from team");
+			
+			while(myRs.next())
+				
+			{
+				int Teamid = myRs.getInt("team_id");
+				
+				
+				System.out.println(Teamid);	
+			}
+				
+		}catch(SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+		
+}
+}

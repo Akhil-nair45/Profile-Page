@@ -1,0 +1,19 @@
+package demotest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class calcBoTest {
+
+//	@Test
+//	public void test() {
+//		fail("Not yet implemented");
+//	}
+	public void testPositiveAdd()
+	{
+		CalcBo cb = new CalcBo();
+		int k = cb.add(10,20);
+		assertEquals(k,30);
+	}
+}
